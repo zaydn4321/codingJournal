@@ -1,0 +1,30 @@
+Tic-Tac-Toe App Flow
+
+1️⃣ App Launch:
+   - AppEntry.swift initializes the app and injects GameService.
+   - The app starts with StartView.swift.
+
+2️⃣ User Selects Game Type:
+   - StartView.swift presents a Picker for selecting:
+     - Two sharing device (Single-player)
+     - Challenge your device (AI bot)
+     - Challenge a friend (Multiplayer)
+
+3️⃣ Start Game:
+   - Based on selection, the user enters player names.
+   - Clicking "Start Game" navigates to GameView.swift.
+
+4️⃣ Gameplay:
+   - GameView.swift renders the Tic-Tac-Toe board.
+   - SquareView.swift represents each clickable game cell.
+   - Clicking a square:
+     - Calls makeMove() in GameService.swift.
+     - Updates game state and checks for winner.
+
+5️⃣ Game Over:
+   - GameService.swift checks if a player has won or if it’s a draw.
+   - GameView.swift displays the result.
+
+6️⃣ Restart or Quit:
+   - User can restart the game with "New Game" (resets GameService).
+   - Clicking "End Game" returns to StartView.swift.
